@@ -4,9 +4,8 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.contrib.auth import login
 from django.db import IntegrityError
-# Create your views here.
 
-def signup(request):
+def signup(request): #FORMULARIO CREACIÓN DE CUENTA
 
     if request.method == 'GET':
         return render(request, 'signup.html', {
@@ -33,3 +32,6 @@ def signup(request):
 
 def home(request):
     return render(request, 'home.html',)
+
+def base(request):
+    return render(request, 'base.html',)
